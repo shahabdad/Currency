@@ -1,16 +1,17 @@
-import { Link } from 'expo-router';
 import { StyleSheet, Text, View, useColorScheme } from 'react-native';
 
-export default function ModalScreen() {
+export default function HistoryScreen() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
 
   return (
     <View style={[styles.container, { backgroundColor: isDark ? '#151718' : '#fff' }]}>
-      <Text style={[styles.title, { color: isDark ? '#ECEDEE' : '#11181C' }]}>This is a modal</Text>
-      <Link href="/" dismissTo style={styles.link}>
-        <Text style={styles.linkText}>Go to home screen</Text>
-      </Link>
+      <Text style={[styles.title, { color: isDark ? '#ECEDEE' : '#11181C' }]}>
+        History
+      </Text>
+      <Text style={[styles.subtitle, { color: isDark ? '#9BA1A6' : '#687076' }]}>
+        Track historical exchange rate trends.
+      </Text>
     </View>
   );
 }
@@ -23,15 +24,13 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 20,
+    fontSize: 28,
     fontWeight: 'bold',
+    marginBottom: 10,
   },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-  linkText: {
-    fontSize: 14,
-    color: '#0284c7',
+  subtitle: {
+    fontSize: 16,
+    textAlign: 'center',
+    opacity: 0.8,
   },
 });
