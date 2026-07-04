@@ -25,27 +25,28 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          href: null,
         }}
       />
       <Tabs.Screen
-        name="rates"
+        name="converter"
         options={{
-          title: 'Rates',
+          title: 'Converter',
         }}
       />
       <Tabs.Screen
-        name="history"
+        name="live-rates"
         options={{
-          title: 'History',
+          title: 'Live Rates',
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="conversion-history"
         options={{
-          title: 'Profile',
+          title: 'History Log',
         }}
       />
+
     </Tabs>
   );
 }
